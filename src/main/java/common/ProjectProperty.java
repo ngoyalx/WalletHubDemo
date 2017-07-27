@@ -30,11 +30,11 @@ public class ProjectProperty {
     fileSeparator = System.getProperty("file.separator");
     currentWorkingDirectory = System.getProperty("user.dir");
     chromeDriverPathWindows = currentWorkingDirectory + fileSeparator + "src" + fileSeparator + "main" + fileSeparator
-            + "resources" + fileSeparator + "drivers" + "chromedriver.exe";
+            + "resources" + fileSeparator + "drivers" + fileSeparator + "chromedriver.exe";
     chromeDriverPathMac = currentWorkingDirectory + fileSeparator + "src" + fileSeparator + "main" + fileSeparator
             + "resources" + fileSeparator + "drivers" + fileSeparator + "chromedriver";
     firefoxDriverPathWindows = currentWorkingDirectory + fileSeparator + "src" + fileSeparator + "main" + fileSeparator
-                + "resources" + fileSeparator + "drivers" + "geckodriver.exe";
+                + "resources" + fileSeparator + "drivers" + fileSeparator + "geckodriver.exe";
     firefoxDriverPathMac = currentWorkingDirectory + fileSeparator + "src" + fileSeparator + "main" + fileSeparator
                 + "resources" + fileSeparator + "drivers" + fileSeparator + "geckodriver";
     faceBookOR = currentWorkingDirectory + fileSeparator + "src" + fileSeparator + "main" + fileSeparator

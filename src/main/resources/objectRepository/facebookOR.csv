@@ -1,0 +1,4 @@
+sr no,parent,testobject,objecttype,how,what
+1,HomePage,username,textfield,xpath,//input[@type='email']
+2,HomePage,password,textfield,xpath,//input[@type='password']
+3,HomePage,loginbutton,button,xpath,//label[@id='loginbutton']

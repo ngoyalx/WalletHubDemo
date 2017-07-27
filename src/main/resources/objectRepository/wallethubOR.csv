@@ -1,0 +1,16 @@
+sr no,parent,testobject,objecttype,how,what
+1,InsurancePage,loginmenu,textfield,xpath,//a[@class='login']
+2,InsurancePage,username,textfield,xpath,//input[@name='em']
+3,InsurancePage,password,textfield,xpath,//input[@name='pw']
+4,InsurancePage,loginbutton,button,xpath,//button[@class='btn blue touch-element-cl']
+5,InsurancePage,starating,div,xpath,//div[@class='reviewinfo info']/span
+6,InsurancePage,changerating,div,xpath,//div[@class='wh-rating-choices-holder']/a[5]
+7,ReviewPage,policydropdown,dropdown,xpath,//div[@class='dropdown-title']
+8,ReviewPage,policyoption,list,xpath,//ul[@class='drop-el']/li[2]
+9,ReviewPage,overallrating,span,xpath,//span[@id='overallRating']/a[5]
+10,ReviewPage,review,textarea,xpath,//textarea[@id='review-content']
+11,ReviewPage,submitbutton,button,xpath,//div[@class='submit']/input
+12,ConfirmationPage,confirmationtext,div,xpath,//div[@class='big-title small']/h1
+12,ConfirmationPage,usermenu,div,xpath,//a[@class='user']
+13,ConfirmationPage,profilemenu,menu,xpath,//nav[@id='m-user']/ul/li[4]/a
+14,ProfilePage,activity,textarea,xpath,(//div[@class='feed-content']/p)[1]

@@ -1,0 +1,14 @@
+<suite name="WalletHubTest" parallel="" thread-count="10" verbose="1">
+    <tests>
+        <test name="FacebookTest">
+            <classes>
+                <class name="testcases.FaceBookLoginTest"/>
+            </classes>
+        </test>
+        <test name="WallethubTest">
+            <classes>
+                <class name="testcases.WalletHubTest"/>
+            </classes>
+        </test>
+    </tests>
+</suite>

@@ -16,7 +16,9 @@ public class ProfilePage extends SeleniumHandles {
     public boolean verifyReviewText(){
         WebElement reviewTextArea = waitForElementToBeVisible(projectProperty.walletHubORData,"ProfilePage","activity");
 
-        if(reviewTextArea.getText().equals(ReviewPage.randomString)){
+        String actualText = reviewTextArea.getText().replaceAll(" ","").replaceAll("\n","");
+        String expectedText = ReviewPage.randomString;
+        if(actualText.equalsIgnoreCase(expectedText)){
             return true;
         }else{
             return false;

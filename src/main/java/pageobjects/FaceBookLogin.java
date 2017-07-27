@@ -12,6 +12,7 @@ public class FaceBookLogin extends SeleniumHandles {
 
     WebDriver driver;
     ProjectProperty projectProperty;
+    FaceBookStatusPage faceBookStatusPage;
 
     public FaceBookLogin(){
         this.driver = SeleniumHandles.driver;
@@ -19,7 +20,7 @@ public class FaceBookLogin extends SeleniumHandles {
     }
 
 
-    public String Login(){
+    public FaceBookStatusPage Login(){
         openUrl(projectProperty.getPropertyFromglobalHashMap("faceBookUrl"));
 
         WebElement username = driver.findElement(getByLocator(projectProperty.faceBookORData,"Homepage","username"));
@@ -31,11 +32,7 @@ public class FaceBookLogin extends SeleniumHandles {
         WebElement submitButton = driver.findElement(getByLocator(projectProperty.faceBookORData,"Homepage","loginbutton"));
         submitButton.click();
 
-        return driver.getTitle();
-    }
-
-    public void postMessage(){
-        System.out.println("<<<<<<<<<<<<-----------Hello World--------------->>>>>>>>>>>>>>>>");
+        return new FaceBookStatusPage();
     }
 
 

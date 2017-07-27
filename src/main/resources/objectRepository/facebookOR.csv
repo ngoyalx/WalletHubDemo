@@ -2,3 +2,6 @@ sr no,parent,testobject,objecttype,how,what
 1,HomePage,username,textfield,xpath,//input[@type='email']
 2,HomePage,password,textfield,xpath,//input[@type='password']
 3,HomePage,loginbutton,button,xpath,//label[@id='loginbutton']
+4,FacebookWall,statusbox,textarea,xpath,(//div[@role='presentation'])[3]/div
+5,FacebookWall,postbutton,button,xpath,(//div[@class='_ohf rfloat'])[1]/div/button
+

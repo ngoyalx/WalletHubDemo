@@ -111,6 +111,17 @@ public class SeleniumHandles extends DriverFactory implements SeleniumActions {
         action.moveToElement(element).click().build().perform();
     }
 
+    public void moveToElementUsingActionsClass(WebElement element){
+        Actions action = new Actions(driver);
+        action.moveToElement(element).click().build().perform();
+    }
+
+    public void sendKeysUsingActionsClass(WebElement element,String text){
+        Actions action = new Actions(driver);
+        action.moveToElement(element).click().build().perform();
+        action.sendKeys(element,text).build().perform();
+    }
+
     public void clickElementUsingJavaScript(WebElement element){
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("arguments[0].scrollIntoView()", element);

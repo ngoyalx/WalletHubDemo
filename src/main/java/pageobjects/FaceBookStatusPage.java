@@ -34,23 +34,22 @@ public class FaceBookStatusPage extends SeleniumHandles {
     public void postSatusMessage(){
 
         try{
-            Thread.sleep(1500);
+        Thread.sleep(1500);
         clickElementBasedOnCordinates();
+
         WebElement postStatusBox = waitForElementToBeVisible(projectProperty.faceBookORData,"FacebookWall","statusbox");
         postStatusBox.click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
+
         WebElement statusPopup = driver.findElement(getByLocator(projectProperty.faceBookORData,"FacebookWall","statusboxpopup"));
         statusPopup.click();
-        System.out.print("Element clicked");
-        /*Actions act = new Actions(driver);
-        act.moveToElement(statusPopup).click().sendKeys("abc").build().perform();*/
 
-        statusPopup.sendKeys(projectProperty.getPropertyFromglobalHashMap("facebookstatusMessage"));
+        sendKeysUsingActionsClass(statusPopup,projectProperty.getPropertyFromglobalHashMap("facebookstatusMessage"));
+        Thread.sleep(3000);
 
         WebElement postButton = waitForElementToBeVisible(projectProperty.faceBookORData,"FacebookWall","postbutton");
-        mouseHoverElement(postButton);
-        System.out.println("<<<<<<<<Mousehover successfull>>>>>>>>>>>>>>>");
         postButton.click();
+        Thread.sleep(3000);
         }catch (Exception e){
             e.printStackTrace();
         }

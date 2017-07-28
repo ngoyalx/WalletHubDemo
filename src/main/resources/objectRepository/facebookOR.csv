@@ -2,6 +2,7 @@ sr no,parent,testobject,objecttype,how,what
 1,HomePage,username,textfield,xpath,//input[@type='email']
 2,HomePage,password,textfield,xpath,//input[@type='password']
 3,HomePage,loginbutton,button,xpath,//label[@id='loginbutton']
-4,FacebookWall,statusbox,textarea,xpath,(//div[@role='presentation'])[3]/div
-5,FacebookWall,postbutton,button,xpath,(//div[@class='_ohf rfloat'])[1]/div/button
+4,FacebookWall,statusbox,textarea,xpath,//textarea[@name='xhpc_message']
+5,FacebookWall,statusboxpopup,div,xpath,//div[@data-testid='status-attachment-mentions-input']/div/div/div
+6,FacebookWall,postbutton,button,xpath,(//div[@class='_ohf rfloat'])[1]/div/button
 

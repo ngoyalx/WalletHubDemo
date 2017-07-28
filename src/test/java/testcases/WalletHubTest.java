@@ -2,7 +2,6 @@ package testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageobjects.*;
@@ -15,13 +14,17 @@ public class WalletHubTest {
 
 
 
-    DriverFactory browserFactory = new DriverFactory();
-    WalletHubInsurancePage insurancePage;
-    ReviewPage reviewPage;
-    ConfirmationPage confirmationPage;
-    ProfilePage profilePage;
+     DriverFactory browserFactory = new DriverFactory();
+     WalletHubInsurancePage insurancePage;
+     ReviewPage reviewPage;
+     ConfirmationPage confirmationPage;
+     ProfilePage profilePage;
 
 
+    /**
+     * Will open the browser(as per the config.properties file)
+     * before starting the test
+     */
 
     @BeforeTest
     public void setup(){
@@ -29,6 +32,10 @@ public class WalletHubTest {
         insurancePage = new WalletHubInsurancePage();
     }
 
+
+    /**
+     * will verify if the review process is successful
+     */
 
     @Test
     public void verifyReviewSubmission(){
@@ -41,6 +48,11 @@ public class WalletHubTest {
     }
 
 
+    /**
+     * This test will execute only if the review submission proceess is
+     * successful. Will verify is the same text is posted in the activity section
+     * that was posted at the time of review submission
+     */
 
     @Test(dependsOnMethods = {"verifyReviewSubmission"})
     public void validateReviewText(){
@@ -49,6 +61,9 @@ public class WalletHubTest {
     }
 
 
+    /**
+     * will close the browser after the test is successful
+     */
     @AfterTest
     public void tearDown(){
         browserFactory.closeBrowser();

@@ -20,6 +20,10 @@ public class FaceBookLogin extends SeleniumHandles {
     }
 
 
+    /**
+     * will login into facebook and return the next page
+     * @return
+     */
     public FaceBookStatusPage Login(){
         openUrl(projectProperty.getPropertyFromglobalHashMap("faceBookUrl"));
 

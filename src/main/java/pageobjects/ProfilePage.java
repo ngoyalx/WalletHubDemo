@@ -13,6 +13,11 @@ public class ProfilePage extends SeleniumHandles {
 
     }
 
+    /**
+     * will verify is the same text is visible on the activity page as was posted at the review
+     * page
+     * @return
+     */
     public boolean verifyReviewText(){
         WebElement reviewTextArea = waitForElementToBeVisible(projectProperty.walletHubORData,"ProfilePage","activity");
 

@@ -16,6 +16,9 @@ public class ReviewPage extends SeleniumHandles {
     }
 
 
+    /**
+     * will select the value from the Policy dropdown
+     */
     public void selectPolicyDropdown(){
         WebElement policyDropdown = driver.findElement(getByLocator(projectProperty.walletHubORData,"ReviewPage","policydropdown"));
         policyDropdown.click();
@@ -24,6 +27,10 @@ public class ReviewPage extends SeleniumHandles {
         dropDownOption.click();
     }
 
+    /**
+     * will write the review
+     * @return
+     */
     public ConfirmationPage writeReview(){
         try {
             WebElement textArea = waitForElementToBeClickable(projectProperty.walletHubORData, "ReviewPage", "review");

@@ -12,6 +12,10 @@ public class FaceBookStatusPage extends SeleniumHandles {
 
     }
 
+    /**
+     * will verify if the user is landed to the correct page after login
+     * @return
+     */
     public boolean verifyPageTitle(){
         if(driver.getTitle().equalsIgnoreCase("Facebook")){
             return true;
@@ -20,13 +24,18 @@ public class FaceBookStatusPage extends SeleniumHandles {
         }
     }
 
+    /**
+     * will post a facebook status message as per the config.properties file
+     */
     public void postSatusMessage(){
         WebElement postStatusBox = waitForElementToBeVisible(projectProperty.faceBookORData,"FacebookWall","statusbox");
         postStatusBox.click();
         postStatusBox.sendKeys(projectProperty.getPropertyFromglobalHashMap("facebookstatusMessage"));
 
         WebElement postButton = waitForElementToBeVisible(projectProperty.faceBookORData,"FacebookWall","postbutton");
-        postButton.click();
+        mouseHoverElement(postButton);
+        System.out.println("<<<<<<<<Mousehover successfull>>>>>>>>>>>>>>>");
+        //postButton.click();
     }
 
 }

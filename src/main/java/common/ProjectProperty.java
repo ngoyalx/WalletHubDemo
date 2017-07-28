@@ -6,6 +6,8 @@ import java.util.List;
 
 /**
  * Created by ngoyal on 23/07/17.
+ * This class will have all the project level variables and objects that will values
+ * which will be used across project
  */
 public class ProjectProperty {
 

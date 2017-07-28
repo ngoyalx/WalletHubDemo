@@ -13,6 +13,10 @@ public class WalletHubInsurancePage extends SeleniumHandles {
         openUrl(projectProperty.getPropertyFromglobalHashMap("walletHubUrl"));
     }
 
+    /**
+     * will login into the application
+     */
+
     public void login(){
         WebElement loginMenu = waitForElementToBeVisible(projectProperty.walletHubORData,"InsurancePage","loginmenu");
         loginMenu.click();
@@ -27,6 +31,10 @@ public class WalletHubInsurancePage extends SeleniumHandles {
         loginButton.click();
     }
 
+    /**
+     * will give the star rating
+     * @return
+     */
     public ReviewPage giveStarRating(){
         WebElement starating = waitForElementToBeVisible(projectProperty.walletHubORData,"InsurancePage","starating");
         mouseHoverElement(starating);

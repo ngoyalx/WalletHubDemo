@@ -117,6 +117,11 @@ public class SeleniumHandles extends DriverFactory implements SeleniumActions {
         element.click();
     }
 
+    public void clickElementBasedOnCordinates(){
+        Actions action = new Actions(driver);
+        action.moveByOffset(600, 350).click().build().perform();
+    }
+
     public HashMap<String,String> getElementDetailsFromOR(List<String[]> ORData, String parent, String testobject){
 
         int totalRows = ORData.size();

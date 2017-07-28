@@ -34,7 +34,7 @@ public class ReviewPage extends SeleniumHandles {
     public ConfirmationPage writeReview(){
         try {
             WebElement textArea = waitForElementToBeClickable(projectProperty.walletHubORData, "ReviewPage", "review");
-            Thread.sleep(3000);
+            Thread.sleep(4000);
             textArea.clear();
             randomString = JavaUtils.generateRandomString(200);
             textArea.sendKeys(randomString);

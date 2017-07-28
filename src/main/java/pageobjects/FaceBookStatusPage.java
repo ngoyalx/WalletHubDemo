@@ -34,7 +34,7 @@ public class FaceBookStatusPage extends SeleniumHandles {
     public void postSatusMessage(){
 
         try{
-        Thread.sleep(1500);
+        Thread.sleep(4000);
         clickElementBasedOnCordinates();
 
         WebElement postStatusBox = waitForElementToBeVisible(projectProperty.faceBookORData,"FacebookWall","statusbox");

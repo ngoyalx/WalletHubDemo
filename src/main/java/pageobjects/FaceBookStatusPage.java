@@ -31,10 +31,10 @@ public class FaceBookStatusPage extends SeleniumHandles {
     /**
      * will post a facebook status message as per the config.properties file
      */
-    public void postSatusMessage(){
+    public boolean postStatusMessage(){
 
         try{
-        Thread.sleep(6000);
+        Thread.sleep(8000);
         clickElementBasedOnCordinates();
 
         WebElement postStatusBox = waitForElementToBeVisible(projectProperty.faceBookORData,"FacebookWall","statusbox");
@@ -50,8 +50,10 @@ public class FaceBookStatusPage extends SeleniumHandles {
         WebElement postButton = waitForElementToBeVisible(projectProperty.faceBookORData,"FacebookWall","postbutton");
         postButton.click();
         Thread.sleep(3000);
+        return true;
         }catch (Exception e){
             e.printStackTrace();
+            return false;
         }
     }
 

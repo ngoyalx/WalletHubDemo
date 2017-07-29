@@ -2,13 +2,13 @@ package utils;
 
 import common.ProjectProperty;
 import interfaces.SeleniumActions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -131,6 +131,17 @@ public class SeleniumHandles extends DriverFactory implements SeleniumActions {
     public void clickElementBasedOnCordinates(){
         Actions action = new Actions(driver);
         action.moveByOffset(600, 350).click().build().perform();
+    }
+
+    public static void takescreenshot(String methodname){
+        try{
+            File screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            File desitation=new File((projectProperty.screenShotPath + methodname + ".png"));
+            FileUtils.copyFile(screenshot, desitation);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public HashMap<String,String> getElementDetailsFromOR(List<String[]> ORData, String parent, String testobject){

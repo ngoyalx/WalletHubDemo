@@ -18,6 +18,7 @@ public class ProjectProperty {
     public static String chromeDriverPathMac;
     public static String firefoxDriverPathMac;
     public static String firefoxDriverPathWindows;
+    public static String screenShotPath;
     public static String faceBookOR;
     public static String wallethubOR;
     public static List<String[]> faceBookORData;
@@ -44,6 +45,8 @@ public class ProjectProperty {
     wallethubOR = currentWorkingDirectory + fileSeparator + "src" + fileSeparator + "main" + fileSeparator
             + "resources" + fileSeparator + "objectRepository" + fileSeparator + "wallethubOR.csv";
     configFilePath = currentWorkingDirectory + fileSeparator + "config.properties";
+    screenShotPath = currentWorkingDirectory + fileSeparator + "src" + fileSeparator + "test" + fileSeparator
+            + "resources" + fileSeparator + "screenshots" + fileSeparator;
     globalProperties = new HashMap<>();
     readAndStoreORData();
     loadConfigAndSystemPropertiesIntoHashMap();

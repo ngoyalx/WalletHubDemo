@@ -16,6 +16,18 @@
       7. Wait till the execution finishes and you see a message 'Build success' in the terminal
       
  ##How to check the reports
-      1. 
+      1. Refresh the project directory
+      2. Go to target/site/allure-maven-plugin floder
+      3. Locate the index.html file
+      4. Right click on the file and open in a browser
+     
+  ##Report details:
+  	1. Overview tab will show the aggregate report
+	2. Defects tab will show any test failures
+	3. Xuni tab will show the indivisual test case report
+	4. Clicking on the test case name will show the further details
+	5. Clicking on the test step will further show the screenshot attached
+	6. Clicking on the image will show the screenshot
+	7. Graph will show the different statitics
 
 

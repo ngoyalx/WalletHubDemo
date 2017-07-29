@@ -9,6 +9,7 @@ import pageobjects.*;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Severity;
 import ru.yandex.qatools.allure.annotations.Step;
+import ru.yandex.qatools.allure.annotations.Stories;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 import utils.DriverFactory;
 import Listeners.CustomListener;
@@ -46,7 +47,7 @@ public class WalletHubTest {
 
     @Test
     @Features("WalletHub - Provide rating and review")
-
+    @Stories("Provide rating")
     @Step("Open Url, Login, Provide rating, Select policy drop down, write review, click Submit button")
     @Severity(SeverityLevel.CRITICAL)
     public void verifyReviewSubmission(){
@@ -59,6 +60,7 @@ public class WalletHubTest {
     }
 
 
+
     /**
      * This test will execute only if the review submission proceess is
      * successful. Will verify is the same text is posted in the activity section
@@ -67,6 +69,7 @@ public class WalletHubTest {
 
     @Test(dependsOnMethods = {"verifyReviewSubmission"})
     @Features("WalletHub - Verify if the review is Posted on the activity page")
+    @Stories("Write review")
     @Step("Go to the activity page after posting the review, Verify if the same review is displayed")
     @Severity(SeverityLevel.NORMAL)
     public void validateReviewText(){

@@ -4,6 +4,12 @@
       3. Install Maven on your system and update path variable
       4. Install TestNG plug-in in Eclipse or IntellijIdea
       5. Install Git SCM on your system for Git Command line
+      
+ ##Setup the project
+ 	1. Go the drive or folder in your system where you want to download the project
+	2. Open the Git command line there
+	3. Use command $git clone https://github.com/ngoyalx/WalletHubDemo.git
+	4. This will download the project in your local system.
 
 ##How to execute test cases:
       1. Go to the project directory and locate the config.properties file.
